@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,7 @@ public class Player {
     String name;
     String weapon;
     String location;
+    ArrayList<String> items = new ArrayList<>();
 
     void chooseName() {
         System.out.println("What is your name?");
@@ -44,6 +46,15 @@ public class Player {
             //throw new Exception("Invalid weapon);
             System.out.println("Location not recognized");
             chooseLocation();
+        }
+    }
+
+    void findItem(String item) {
+        System.out.println("You find a " + item + "! Press y pick up");
+        String answer = Game.scanner.nextLine();
+        if(answer.equalsIgnoreCase("y")) {
+            items.add(item);
+            System.out.println("You picked " + item + " up");
         }
     }
 }
