@@ -64,4 +64,28 @@ public class Player extends Character{
             System.out.printf("You pick %s up\n", item);
         }
     }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<String> items) {
+        this.items = items;
+    }
 }
